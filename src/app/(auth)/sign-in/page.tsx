@@ -69,7 +69,7 @@ export default function SignIn() {
     <div className="flex grow items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-center text-3xl font-bold text-gray-800">
+          <CardTitle className="text-center text-3xl font-bold">
             Sign In
           </CardTitle>
         </CardHeader>
