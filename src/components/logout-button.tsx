@@ -1,19 +1,19 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
-import LoadingButton from "@/components/custom/loading-button";
-import { useState } from "react";
+import { signOut } from "@/lib/auth/client";
 import { toast } from "sonner";
 
-export default function LogoutButton() {
+export default function LogoutButton({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const router = useRouter();
-  const [pending, setPending] = useState(false);
 
   const handleSignOut = async () => {
     try {
-      setPending(true);
-      await authClient.signOut({
+      await signOut({
         fetchOptions: {
           onSuccess: () => {
             router.push("/");
@@ -24,14 +24,8 @@ export default function LogoutButton() {
     } catch (error) {
       toast.error("Something went wrong.");
       console.log(error);
-    } finally {
-      setPending(false);
     }
   };
 
-  return (
-    <LoadingButton pending={pending} onClick={handleSignOut}>
-      Sign Out
-    </LoadingButton>
-  );
+  return <div onClick={handleSignOut}>{children}</div>;
 }

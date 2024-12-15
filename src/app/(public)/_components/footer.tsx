@@ -1,5 +1,5 @@
 import Logo from "@/components/logo";
-import { FaSquareGithub, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaSquareGithub, FaXTwitter } from "react-icons/fa6";
 
 const socialIcons = [
   { icon: FaXTwitter, href: "https://x.com/laduniestu", ariaLabel: "Twitter" },
@@ -58,7 +58,7 @@ const footerData = [
 export default function Footer() {
   return (
     <footer>
-      <div className="relative mx-auto max-w-6xl px-2 md:px-5">
+      <div className="relative mx-auto mt-10 max-w-6xl px-2 md:px-5">
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {footerData.map((block, index) => (
             <div key={index} className="space-y-2">
@@ -84,13 +84,13 @@ export default function Footer() {
             </div>
             <div className="text-sm">
               <p className="mb-3 text-secondary-foreground">
-                © dun.gg
-                <span className="text-gray-700"> · </span>
+                © Better Next
+                <span> · </span>
                 <a
-                  className="text-secondary-foreground transition hover:text-primary"
-                  href="#0"
+                  className="text-primary transition hover:text-primary/80"
+                  href="https://dun.gg"
                 >
-                  Terms
+                  Dun.gg
                 </a>
               </p>
               <ul className="inline-flex gap-4">

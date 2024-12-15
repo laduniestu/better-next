@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ModeToggle } from "@/components/theme-toggle";
 import Logo from "@/components/logo";
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth/server";
 import { headers } from "next/headers";
 import MobileNav from "@/app/(public)/_components/mobile-nav";
 import {
@@ -16,8 +16,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BadgeCheck, Bell, CreditCard, Sparkles } from "lucide-react";
+import { CogIcon, HomeIcon, LockIcon, LogOut, UserIcon } from "lucide-react";
 import LogoutButton from "@/components/logout-button";
+import * as React from "react";
 
 export default async function Header() {
   const session = await auth.api.getSession({
@@ -26,23 +27,15 @@ export default async function Header() {
   const menus = [
     {
       name: "Home",
-      href: "/",
+      href: "#hero",
     },
     {
       name: "About",
-      href: "/",
+      href: "#about",
     },
     {
       name: "Features",
-      href: "/",
-    },
-    {
-      name: "Pricing",
-      href: "/",
-    },
-    {
-      name: "Contact Us",
-      href: "/",
+      href: "#features",
     },
   ];
   return (
@@ -54,9 +47,9 @@ export default async function Header() {
         </div>
         <nav className="hidden items-center gap-6 md:flex">
           {menus.map((item) => (
-            <Link key={item.name} href={item.href}>
+            <a key={item.name} href={item.href}>
               {item.name}
-            </Link>
+            </a>
           ))}
         </nav>
         <ul className="flex items-center justify-end gap-3 md:w-32">
@@ -66,7 +59,7 @@ export default async function Header() {
           <li className="hidden md:flex">
             {!session ? (
               <Button asChild>
-                <Link href="/sign-in">Login</Link>
+                <Link href="/login">Login</Link>
               </Button>
             ) : (
               <DropdownMenu>
@@ -110,30 +103,41 @@ export default async function Header() {
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                      <Sparkles />
-                      Upgrade to Pro
-                    </DropdownMenuItem>
+                    <Link href="/app">
+                      <DropdownMenuItem>
+                        <HomeIcon />
+                        Dashboard
+                      </DropdownMenuItem>
+                    </Link>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
                   <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                      <BadgeCheck />
-                      Account
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <CreditCard />
-                      Billing
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Bell />
-                      Notifications
-                    </DropdownMenuItem>
+                    <Link href="/app/settings">
+                      <DropdownMenuItem>
+                        <CogIcon />
+                        Settings
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link href="/app/settings/personal-details">
+                      <DropdownMenuItem>
+                        <UserIcon />
+                        Profile
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link href="/app/settings/password-and-security">
+                      <DropdownMenuItem>
+                        <LockIcon />
+                        Change Password
+                      </DropdownMenuItem>
+                    </Link>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>
-                    <LogoutButton />
-                  </DropdownMenuItem>
+                  <LogoutButton>
+                    <DropdownMenuItem>
+                      <LogOut />
+                      Log out
+                    </DropdownMenuItem>
+                  </LogoutButton>
                 </DropdownMenuContent>
               </DropdownMenu>
             )}
