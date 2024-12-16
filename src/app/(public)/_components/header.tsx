@@ -37,6 +37,10 @@ export default async function Header() {
       name: "Features",
       href: "#features",
     },
+    {
+      name: "Analytics",
+      href: "https://stats.dun.gg/share/wBd7o6ts7CUEVyVu/betternext.dun.gg",
+    },
   ];
   return (
     <header className="relative mx-auto w-full max-w-6xl p-2 md:p-5">

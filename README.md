@@ -7,21 +7,22 @@ This Next.js starter kit includes everything you need to build your awesome prod
 - 💫 Modern UI/UX : Responsive Landing & Dashboard Page
 - 💯️ Fully Type-safe : Typescript, Zod
 - 🔐 Authentication : Email & Password, more soon...
-- [🧑🏼‍✈️ Admin Role](https://www.better-auth.com/docs/plugins/admin) : ⏳ coming-soon
-- 📊 Analytics : ⏳ coming-soon
+- 📊 Analytics : Event trigger, Page view
+- 🙎🏼‍♂️ Admin Role: ⏳ coming-soon
 - 💸 Payment : ⏳ coming-soon
 
 
 ## Tech Stack
-- Runtime : Bun
-- Framework : Next.js 15
-- Database : PostgreSQL using Docker
-- ORM : PrismaORM
-- Styling : TailwindCSS, Shadcn/ui, Prettier, ReactIcons
-- Validation : Zod
-- Authentication : Better-auth
+- Runtime : [Bun](https://github.com/oven-sh/bun)
+- Framework : [Next.js 15](https://github.com/vercel/next.js)
+- Database : [PostgreSQL](https://github.com/postgres/postgres) using Docker
+- ORM : [Prisma ORM](https://github.com/prisma/prisma)
+- Styling : [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), [Shadcn/UI](https://github.com/shadcn-ui/ui), [ReactIcons](https://github.com/react-icons/react-icons)
+- Dev Tools : [T3-Env](https://github.com/t3-oss/t3-env), [Prettier](https://github.com/prettier/prettier)
+- Validation : [Zod](https://github.com/colinhacks/zod)
+- Authentication : [Better-auth](https://github.com/better-auth/better-auth)
+- Analytics : [Umami](https://github.com/umami-software/umami)
 - Email : ⏳ coming-soon
-- Analytics : ⏳ coming-soon
 
 ## How to Get Started
 Start by clicking the "use this template" button on the github repo. We suggest creating a new repository so you can
@@ -51,6 +52,7 @@ bun run dev
 - [x] Change Email
 - [x] Change Password
 - [x] Delete Account
+- [x] Analytics
 
 - [ ] Require Email Verification
 - [ ] Reset Password
@@ -62,7 +64,6 @@ bun run dev
 - [ ] Admin
 - [ ] Admin Dashboard
 - [ ] Upload profile avatar
-- [ ] Analytics
 
 ## Contributing
 If you find obvious issues with this starter kit, feel free to submit a pull request or submit and issue.

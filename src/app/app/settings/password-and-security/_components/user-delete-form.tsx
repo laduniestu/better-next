@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { LoadingButton } from "@/components/ui/loading-button";
+import { trackEvent } from "@/lib/umami";
 
 interface UserDeleteFormProps {
   session: Session | null;
@@ -42,6 +43,7 @@ export function UserDeleteForm({ session }: UserDeleteFormProps) {
             id: "deleteAccountToast",
           });
           router.refresh();
+          trackEvent("User Delete Account");
         })
         .catch((err) => {
           toast.error(err.message ?? "Something went wrong.", {

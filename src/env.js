@@ -11,6 +11,8 @@ const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_APP_URL: z.string(),
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string().optional(),
+    NEXT_PUBLIC_UMAMI_HOST: z.string().optional(),
   },
   runtimeEnv: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
@@ -19,8 +21,8 @@ const env = createEnv({
     // RESEND_API_KEY: process.env.RESEND_API_KEY,
     // GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
     // GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
-    // NEXT_PUBLIC_POSTHOG_API_KEY: process.env.POSTHOG_API_KEY,
-    // NEXT_PUBLIC_POSTHOG_HOST: process.env.POSTHOG_HOST,
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID,
+    NEXT_PUBLIC_UMAMI_HOST: process.env.NEXT_PUBLIC_UMAMI_HOST,
   },
 });
 

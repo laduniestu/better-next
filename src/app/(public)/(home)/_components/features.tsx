@@ -11,6 +11,7 @@ import {
   SiZod,
 } from "react-icons/si";
 import { FaUserLock } from "react-icons/fa6";
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 
 const techList = [
   { icon: RiNextjsFill, label: "Next.js 15 App Router" },
@@ -23,6 +24,7 @@ const techList = [
   { icon: FaUserLock, label: "Credentials Authentication" },
   { icon: SiPrisma, label: "Prisma ORM" },
   { icon: SiZod, label: "Zod Validation" },
+  { icon: TbDeviceDesktopAnalytics, label: "Analytics using Umami" },
   { icon: SiActix, label: "And more!" },
 ];
 

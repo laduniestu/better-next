@@ -26,7 +26,7 @@ export default function Hero() {
                 it&apos;s everything you need to launch your project.
               </p>
               <div className="mx-auto max-w-xs space-x-0 space-y-4 sm:flex sm:max-w-none sm:justify-center sm:space-x-4 sm:space-y-0">
-                <Button asChild className="group">
+                <Button asChild className="group" data-umami-event="CTA Button">
                   <a href="#features">
                     Explore tech stacks
                     <span className="tracking-normal transition-transform group-hover:translate-x-0.5">
@@ -34,7 +34,11 @@ export default function Hero() {
                     </span>
                   </a>
                 </Button>
-                <Button asChild variant="outline">
+                <Button
+                  asChild
+                  variant="outline"
+                  data-umami-event="Github Button"
+                >
                   <a
                     href="https://github.com/laduniestu/better-next"
                     target="_BLANK"
