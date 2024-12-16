@@ -43,7 +43,7 @@ export default function Features() {
         {techList.map((tech, index) => (
           <li
             key={index}
-            className="flex flex-col items-center justify-center gap-4 rounded-xl bg-accent p-4 text-center leading-tight text-black shadow shadow-primary drop-shadow-xl transition hover:scale-105"
+            className="flex flex-col items-center justify-center gap-4 rounded-xl bg-accent p-4 text-center leading-tight shadow shadow-primary drop-shadow-xl transition hover:scale-105"
           >
             <tech.icon className="h-10 w-10 text-primary" /> {tech.label}
           </li>

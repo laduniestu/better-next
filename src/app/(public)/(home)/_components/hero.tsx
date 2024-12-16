@@ -25,7 +25,7 @@ export default function Hero() {
                 your awesome product. From authentication to analytics,
                 it&apos;s everything you need to launch your project.
               </p>
-              <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+              <div className="mx-auto max-w-xs space-x-0 space-y-4 sm:flex sm:max-w-none sm:justify-center sm:space-x-4 sm:space-y-0">
                 <Button asChild className="group">
                   <a href="#features">
                     Explore tech stacks
@@ -34,7 +34,7 @@ export default function Hero() {
                     </span>
                   </a>
                 </Button>
-                <Button asChild variant="outline" className="ml-4">
+                <Button asChild variant="outline">
                   <a
                     href="https://github.com/laduniestu/better-next"
                     target="_BLANK"
