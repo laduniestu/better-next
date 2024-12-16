@@ -17,6 +17,7 @@ This Next.js starter kit includes everything you need to build your awesome prod
 - Framework : [Next.js 15](https://github.com/vercel/next.js)
 - Database : [PostgreSQL](https://github.com/postgres/postgres) using Docker
 - ORM : [Prisma ORM](https://github.com/prisma/prisma)
+- Forms : [React Hook Form](https://github.com/react-hook-form/react-hook-form)
 - Styling : [TailwindCSS](https://github.com/tailwindlabs/tailwindcss), [Shadcn/UI](https://github.com/shadcn-ui/ui), [ReactIcons](https://github.com/react-icons/react-icons)
 - Dev Tools : [T3-Env](https://github.com/t3-oss/t3-env), [Prettier](https://github.com/prettier/prettier)
 - Validation : [Zod](https://github.com/colinhacks/zod)
