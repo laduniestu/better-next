@@ -46,17 +46,22 @@ bun run dev
 - [x] Protected Routes
 - [x] Dark/Light Mode
 - [x] Landing Page
-- [x] User Settings
 - [x] User Dashboard
+- [x] Update Profile
+- [x] Change Email
+- [x] Change Password
+- [x] Delete Account
 
-- [ ] Email Verification
-- [ ] OAuth
+- [ ] Require Email Verification
+- [ ] Reset Password
+- [ ] Email Verification for Delete Account
+- [ ] Email Verification for Change Email
+- [ ] OAuth (Github, Google)
 - [ ] Magic Link
 - [ ] Email OTP
 - [ ] Admin
 - [ ] Admin Dashboard
-- [ ] S3 Storage
-- [ ] Payments
+- [ ] Upload profile avatar
 - [ ] Analytics
 
 ## Contributing

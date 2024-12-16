@@ -27,7 +27,6 @@ export function UserDeleteForm({ session }: UserDeleteFormProps) {
   const [confirmation, setConfirmation] = useState("");
   const router = useRouter();
 
-  // TODO: Delete user still not work
   function onSubmit() {
     startTransition(async () => {
       toast.loading("Deleting account...", { id: "deleteAccountToast" });
