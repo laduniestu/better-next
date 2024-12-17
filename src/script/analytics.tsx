@@ -8,7 +8,7 @@ export default function Analytics() {
       <script
         src={env.NEXT_PUBLIC_UMAMI_HOST}
         data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-        defer
+        async
       />
     );
   }

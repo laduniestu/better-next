@@ -12,7 +12,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { updatePasswordSchema } from "@/shcema/user";
+import { updatePasswordSchema } from "@/schema/user";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";

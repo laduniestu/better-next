@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Session } from "@/lib/auth/types";
-import { updateEmailSchema } from "@/shcema/user";
+import { updateEmailSchema } from "@/schema/user";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
