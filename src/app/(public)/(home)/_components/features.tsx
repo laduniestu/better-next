@@ -1,7 +1,6 @@
 import { RiNextjsFill } from "react-icons/ri";
 import {
   SiActix,
-  SiBun,
   SiDarkreader,
   SiPrettier,
   SiPrisma,
@@ -17,7 +16,6 @@ import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 const techList = [
   { icon: RiNextjsFill, label: "Next.js 15 App Router" },
   { icon: SiReact, label: "React Hook Form" },
-  { icon: SiBun, label: "Bun" },
   { icon: SiPrettier, label: "Prettier" },
   { icon: SiTypescript, label: "Typescript" },
   { icon: SiTailwindcss, label: "Tailwind CSS" },

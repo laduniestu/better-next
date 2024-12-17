@@ -11,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@better-fetch/fetch": "^1.1.12",
     "@hookform/resolvers": "^3.9.1",
     "@plunk/node": "^3.0.3",
     "@prisma/client": "^6.0.1",

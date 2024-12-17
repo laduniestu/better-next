@@ -13,7 +13,6 @@ This Next.js starter kit includes everything you need to build your awesome prod
 
 
 ## Tech Stack
-- Runtime : [Bun](https://github.com/oven-sh/bun)
 - Framework : [Next.js 15](https://github.com/vercel/next.js)
 - Database : [PostgreSQL](https://github.com/postgres/postgres) using Docker
 - ORM : [Prisma ORM](https://github.com/prisma/prisma)
@@ -37,7 +36,7 @@ installed, or modify the project to point to a hosted database solution.
 ```bash
 cp .env.example .env
 bun i
-docker compose up
+docker compose up -d
 bunx prisma db push
 bun run dev
 ```

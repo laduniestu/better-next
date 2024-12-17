@@ -1,27 +1,25 @@
-FROM imbios/bun-node:18-slim AS base
+FROM oven/bun:alpine AS base
 
+# Step 1 - install dependencies
+FROM base AS deps
 WORKDIR /app
-
 COPY package.json bun.lockb ./
 COPY prisma ./prisma
-
 RUN bun install --frozen-lockfile
 
+# Step 2 - rebuild the app
 FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN bun prisma generate
 RUN bun run build
 
-FROM node:18-slim AS runner
+# Step 3 - copy all the files and run server
+FROM base AS runner
 WORKDIR /app
-
-ARG CONFIG_FILE
-COPY $CONFIG_FILE /app/.env
-
-COPY --from=builder  /app/.next/standalone ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
-
-ENV PORT 3000
-
-CMD ["node", "server.js"]
+CMD ["bun", "run", "server.js"]
