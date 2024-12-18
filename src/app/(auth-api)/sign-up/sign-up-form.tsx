@@ -62,8 +62,10 @@ export default function SignUpForm() {
             toast.loading("Creating account...", { id: "signUpToast" });
           },
           onSuccess: () => {
-            toast.success("Account created successfully", {
+            toast.success("Email verification sent.", {
               id: "signUpToast",
+                description: "Please check your email to verify your account.",
+                duration: Infinity,
             });
             router.push(callbackUrl ?? AUTHENTICATED_URL);
           },
