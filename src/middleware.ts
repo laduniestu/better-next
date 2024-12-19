@@ -12,16 +12,26 @@ export default async function authMiddleware(request: NextRequest) {
   const pathName = request.nextUrl.pathname;
   const isAuthRoute = authRoutes.includes(pathName);
   const isProtectedRoute = pathName.startsWith(protectedRoutesPrefix);
+  const cookies = request.headers.get("cookie");
+
+  const startTime = Date.now();
 
   const { data: session } = await betterFetch<Session>(
     "/api/auth/get-session",
     {
       baseURL: env.NEXT_PUBLIC_APP_URL,
       headers: {
-        cookie: request.headers.get("cookie") || "",
+        cookie: cookies || "",
       },
-    },
+    }
   );
+
+  const endTime = Date.now();
+  const duration = endTime - startTime;
+
+  console.log(`____Get Session Time: ${duration}ms`);
+  console.log(cookies);
+
   if (isAuthRoute) {
     if (session) {
       return NextResponse.redirect(new URL(AUTHENTICATED_URL, request.url));
