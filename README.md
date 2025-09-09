@@ -3,23 +3,22 @@
 ![Status: Archived](https://img.shields.io/badge/status-archived-red.svg)
 
 Thank you to everyone who used and ⭐ starred this repository 🙏.  
-This project is now **archived** and will no longer receive updates or maintenance.
+This project is now **archived** because I’ve created a new and improved **starter kit** that replaces it.
 
 ## Why archived?
-- This project is no longer used in production.
-- There are better and actively maintained alternatives.
+- This codebase has been superseded by a newer starter kit.
+- The new project includes better structure, updated dependencies, and long-term maintenance.
 
-## Alternatives
-- [NewProjectName](https://github.com/username/NewProjectName) (recommended)
-- Or consider other up-to-date libraries/frameworks.
+## New Starter Kit
+👉 Please use the new repository here: [NextStart](https://github.com/laduniestu/nextstart)
 
 ## Notes
-- The code remains available and can still be used "as is".
-- No further issues, pull requests, or security updates will be provided.
+- The code here is still available for reference but will no longer be updated.
+- No further issues, pull requests, or security updates will be accepted.
 
 ---
 
-Once again, thank you for your support ❤️
+Once again, thank you for all the support ❤️
 
 ---------------
 # The Perfect Next.js Starter Kit
