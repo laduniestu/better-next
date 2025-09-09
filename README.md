@@ -1,3 +1,27 @@
+# 🚨 Archived Repository
+
+![Status: Archived](https://img.shields.io/badge/status-archived-red.svg)
+
+Thank you to everyone who used and ⭐ starred this repository 🙏.  
+This project is now **archived** and will no longer receive updates or maintenance.
+
+## Why archived?
+- This project is no longer used in production.
+- There are better and actively maintained alternatives.
+
+## Alternatives
+- [NewProjectName](https://github.com/username/NewProjectName) (recommended)
+- Or consider other up-to-date libraries/frameworks.
+
+## Notes
+- The code remains available and can still be used "as is".
+- No further issues, pull requests, or security updates will be provided.
+
+---
+
+Once again, thank you for your support ❤️
+
+---------------
 # The Perfect Next.js Starter Kit
 This Next.js starter kit includes everything you need to build your awesome product. From authentication to analytics, it's everything you need to launch your project.
 
